@@ -11,7 +11,6 @@ import org.springframework.web.server.ResponseStatusException;
 @RestControllerAdvice
 public class UserExceptionHandler {
 
-    @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(ResponseStatusException.class)
     public String handlerNotFoundException(ResponseStatusException exception) {
         log.error("User not found {}", exception.getClass());
